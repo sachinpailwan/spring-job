@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    password: rw2ymMwkul1h3cl6
+    username: root
+    cloud:
+    gcp:
+      sql:
+        instance-connection-name: pailsom-db-gcp:us-central1:pailsom-mysql
+        database-name: owner
+      credentials:
+        location: classpath:\\pailsom-db-gcp-43c1a0339299.json
+
