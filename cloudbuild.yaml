@@ -1,0 +1,10 @@
+steps:
+  # build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/pailsom-db-gcp/spring-job', '.' ]
+  # push the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'push', 'gcr.io/pailsom-db-gcp/spring-job']
+  # deploy to cloud run on GKE
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ['run', 'deploy', 'demo-ui', '--image', 'gcr.io/pailsom-db-gcp/cloudrun', '--cluster', 'cloud-run-cluster', '--cluster-location', 'us-central1-c', '--namespace', 'default', '--platform', 'gke']
