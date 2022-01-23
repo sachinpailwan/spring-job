@@ -8,5 +8,5 @@ spring:
         instance-connection-name: pailsom-db-gcp:us-central1:pailsom-mysql
         database-name: owner
       credentials:
-        location: file:src/main/resources/pailsom-db-gcp-43c1a0339299.json
+        location: classpath:pailsom-db-gcp-43c1a0339299.json
 
