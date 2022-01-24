@@ -7,4 +7,8 @@ spring:
       sql:
         instance-connection-name: pailsom-db-gcp:us-central1:pailsom-mysql
         database-name: owner
-
+#      credentials:
+#        location: file:pailsom-db-gcp-43c1a0339299.json
+  batch:
+    job:
+      enabled: false

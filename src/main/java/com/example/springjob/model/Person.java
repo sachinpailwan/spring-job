@@ -1,4 +1,4 @@
-package com.example.springjob;
+package com.example.springjob.model;
 
 public class Person {
 
